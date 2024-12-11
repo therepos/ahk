@@ -3,16 +3,18 @@
 # wget -qO- https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/install_pyenv.sh | sudo bash
 # curl -sSL https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/install_pyenv.sh | sudo bash
 
-# Check if running as root or sudo user
-if [[ $EUID -ne 0 ]]; then
-  echo "Please run this script as root or use sudo."
-  exit 1
+#!/bin/bash
+
+# Ensure sudo is available
+if ! command -v sudo &> /dev/null; then
+    echo "sudo is not installed or available. Please install sudo or run as root."
+    exit 1
 fi
 
 # Update and install required dependencies
 echo "Updating system packages and installing dependencies..."
-apt update && apt upgrade -y
-apt install -y build-essential curl libssl-dev zlib1g-dev libbz2-dev \
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y build-essential curl libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
 
@@ -56,4 +58,5 @@ fi
 echo "Installation complete. Verifying Python version..."
 python --version
 pip --version
+
 
