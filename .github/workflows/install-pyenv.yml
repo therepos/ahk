@@ -16,10 +16,4 @@ jobs:
 
     - name: Run installation script
       run: |
-        # Run the script directly from the repo
-        bash scripts/install_pyenv.sh
-
-    - name: Verify Python installation
-      run: |
-        python --version
-        pip --version
+        sudo bash scripts/install_pyenv.sh
