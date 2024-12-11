@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# wget -qO- https://raw.githubusercontent.com/<username>/<repo>/<branch>/setup/install_pyenv.sh | bash
-# curl -sSL https://raw.githubusercontent.com/<username>/<repo>/<branch>/setup/install_pyenv.sh | bash
+# wget -qO- https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/install_pyenv.sh | sudo bash
+# curl -sSL https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/install_pyenv.sh | sudo bash
 
 # Check if running as root or sudo user
 if [[ $EUID -ne 0 ]]; then
