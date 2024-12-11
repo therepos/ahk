@@ -10,21 +10,21 @@ This repository provides standalone shell scripts to **install** and **uninstall
 ### Install Pyenv
 To install `pyenv` and the latest stable Python version:
 ```bash
-wget -qO- https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/install_pyenv.sh | bash
+wget -qO- https://raw.githubusercontent.com/therepos/main/scripts/install-pyenv.sh | bash
 ```
 or:
 ```bash
-curl -sSL https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/install_pyenv.sh | bash
+curl -sSL https://raw.githubusercontent.com/therepos/main/scripts/install-pyenv.sh | bash
 ```
 
 ### Uninstall Pyenv
 To completely remove `pyenv` and all its configurations:
 ```bash
-wget -qO- https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/uninstall_pyenv.sh | bash
+wget -qO- https://raw.githubusercontent.com/therepos/main/scripts/uninstall-pyenv.sh | bash
 ```
 or:
 ```bash
-curl -sSL https://raw.githubusercontent.com/<username>/<repo>/<branch>/scripts/uninstall_pyenv.sh | bash
+curl -sSL https://raw.githubusercontent.com/therepos/main/scripts/uninstall_pyenv.sh | bash
 ```
 
 ---
