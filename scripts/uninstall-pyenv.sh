@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# wget -qO- https://raw.githubusercontent.com/therepos/windows/main/scripts/install-pyenv.sh | sudo bash
-# curl -sSL https://raw.githubusercontent.com/therepos/windows/main/scripts/install-pyenv.sh | sudo bash
+# wget -qO- https://raw.githubusercontent.com/therepos/windows/main/scripts/uninstall-pyenv.sh | bash
+# curl -sSL https://raw.githubusercontent.com/therepos/windows/main/scripts/uninstall-pyenv.sh | bash
 
 # Ensure sudo is available
 if ! command -v sudo &> /dev/null; then
@@ -11,7 +11,7 @@ fi
 
 echo "Starting the uninstallation of pyenv and related components..."
 
-# Remove pyenv configuration from shell initialization files
+# Remove pyenv configuration from bash initialization files
 echo "Removing pyenv configuration from shell initialization files..."
 sed -i '/export PYENV_ROOT/d' ~/.bashrc
 sed -i '/export PATH="\$PYENV_ROOT\/bin:\$PATH"/d' ~/.bashrc
@@ -26,6 +26,12 @@ if [[ -d "$HOME/.pyenv" ]]; then
     rm -rf "$HOME/.pyenv"
 else
     echo "pyenv directory not found. Skipping..."
+fi
+
+# Remove installed Python versions managed by pyenv
+echo "Cleaning up installed Python versions..."
+if command -v pyenv &> /dev/null; then
+    pyenv uninstall --force $(pyenv versions --bare)
 fi
 
 # Reload shell to remove pyenv references
