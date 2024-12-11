@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# wget -qO- https://raw.githubusercontent.com/therepos/windows/main/scripts/install-pyenv.sh | sudo bash
-# curl -sSL https://raw.githubusercontent.com/therepos/windows/main/scripts/install-pyenv.sh | sudo bash
+# wget -qO- https://raw.githubusercontent.com/therepos/windows/main/scripts/install-pyenv.sh | bash
+# curl -sSL https://raw.githubusercontent.com/therepos/windows/main/scripts/install-pyenv.sh | bash
 
 # Ensure sudo is available
 if ! command -v sudo &> /dev/null; then
