@@ -1,3 +1,5 @@
+; Requires AutoHotkey v1 @ https://www.autohotkey.com/
+; Requires BCTL @ https://bluetoothinstaller.com/bluetooth-command-line-tools
 #Persistent
 #NoEnv
 #SingleInstance Force  ; Automatically replace any running instance
