@@ -1,3 +1,4 @@
+; Purpose: Disconnect and reconnect bluetooth speaker SPACE 5
 ; Requires AutoHotkey v1 @ https://www.autohotkey.com/
 ; Requires BCTL @ https://bluetoothinstaller.com/bluetooth-command-line-tools
 #Persistent
